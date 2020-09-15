@@ -38,9 +38,11 @@ function appendPrograms(programs) {
     for (let program of programs) {
         console.log(program.id);
         console.log(program.name);
+        console.log(program.logo)
         htmlTemplate += `
     <article>
       <h2>${program.name}</h2>
+      <img src="${program.logo}">
     </article>
     `;
     }
