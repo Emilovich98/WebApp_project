@@ -1,7 +1,14 @@
+:root {
+    --blue: #4B75FF;
+    --blue-hover: #2E5BEF;
+
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
 /* Navigation menu */
@@ -35,8 +42,51 @@ nav {
 
 #nav-heading {
     font-family: 'Montserrat', sans-serif;
-    color: #4B75FF;
+    color: var(--blue);
 }
+
+#nav-input-container {
+    position: absolute;
+    right: 0px;
+}
+
+#fav-btn {
+    background-color: white;
+    border-radius: 28px;
+    border: 1px solid #707070;
+    display: inline-block;
+    cursor: pointer;
+    color: #707070;
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 6px 27px;
+    margin: auto 20px;
+    text-decoration: none;
+
+
+
+}
+
+#search-input {
+    background-color: #e6e6e6;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    color: #363336;
+    font-family: Montserrat;
+    font-size: 16px;
+    padding: 6px 20px 6px 20px;
+    margin: auto 20px;
+    text-decoration: none;
+    height: 35px;
+
+}
+
+#search-input:active {
+    outline: none;
+    border: none;
+}
+
 
 /* Styling for categories */
 #categories {
@@ -48,6 +98,25 @@ nav {
     position: absolute;
     top: 10vh;
     left: 0;
+    justify-content: center;
+    display: block;
+    padding: 0 50px 0 20px;
+}
+
+#category {
+    background-color: black;
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+
+}
+
+#categori {
+    background-color: var(--blue);
+    width: 100%;
+    height: 10vh;
+    margin-top: 5px;
+
 }
 
 /* Main */
@@ -64,9 +133,58 @@ main {
 }
 
 /* styling for filters */
-#filters {
+
+
+
+#filtes-container {
     width: 100%;
     height: 6vh;
-    background-color: #4B75FF;
+    background-color: var(--blue);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.dropbtn {
+    background-color: var(--blue);
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-left: white 0.5px solid;
+    width: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 6vh;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--blue);
+    text-align: center;
+    width: 100%;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+    border-bottom: #F1F1F1 solid 1px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--blue-hover);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
