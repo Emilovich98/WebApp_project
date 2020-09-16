@@ -240,6 +240,8 @@
     background-color: blanchedalmond;
     height: 70px;
     border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .logo-name-container {
@@ -276,12 +278,67 @@
     font-size: 30px;
 }
 
+.buttens-right-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.visit-btn {
+    height: 40px;
+    width: 100px;
+    margin-right: 16px;
+}
+
+.likes-container {
+    height: 40px;
+    display: flex;
+    margin-right: 16px;
+}
+
+.like-btn {
+    height: 40px;
+    width: 40px;
+    margin-right: 16px;
+}
+
+.like-img {
+    height: 100%;
+}
+
+.like-display {
+    background-color: darkblue;
+    height: 40px;
+    width: 100px;
+}
+
+.favorites-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 40px;
+    margin-right: 16px;
+    align-items: center;
+}
+
+.add-to-fav-btn {
+    height: 40px;
+    width: 40px;
+}
+
+.star-img {
+    height: 100%;
+}
+
+.fav-text {
+    margin-right: 16px;
+}
+
 
 
 /* Card main */
 .card-main-container {
 
-    height: 300px;
+    height: 360px;
     display: flex;
 }
 
@@ -339,17 +396,14 @@
 }
 
 .card-main-container-right {
-
     width: 50%;
     height: 100%;
-
 }
 
 .video {
     width: 90%;
     margin: 10px 0;
     border-radius: 5px;
-
 }
 
 .course-btn {
@@ -360,9 +414,6 @@
     border-radius: 10px;
     color: white;
     cursor: pointer;
-
-
-
 }
 
 .difficulty-img {
@@ -384,4 +435,10 @@
 
 .filter-table tr:nth-child(2) {
     padding-top: 30px;
+}
+
+.card-keywords-container {
+    background-color: cornflowerblue;
+    height: 70px;
+    border-radius: 0px 0px 10px 10px;
 }
