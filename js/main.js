@@ -37,21 +37,30 @@ function searchPrograms(value) {
     let filteredPrograms = [];
     for (let program of _programs) {
       let companyName = program.companyName.toLowerCase();
-      if (companyName.includes(value.toLowerCase())) 
-      
+      let name = program.name.toLowerCase();
+      let price = program.price.toLowerCase();
+      //let keywords = program.keywords.toLowerCase()
+      if (companyName.includes(value.toLowerCase()))
       {
         filteredPrograms.push(program);
       }
+      else if (name.includes(value.toLowerCase()))
+      {
+        filteredPrograms.push(program);
+      }
+      else if (price.includes(value.toLowerCase()))
+      {
+        filteredPrograms.push(program);
+      }
+      /*lse if (keywords.includes(value.toLowerCase()))
+      {
+        filteredPrograms.push(program);
+      }*/
     }
   
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
   }
-
-
-
-
-
 
 
 function appendKeyword(_keyword) {
