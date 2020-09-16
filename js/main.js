@@ -40,70 +40,74 @@ function appendPrograms(programs) {
         console.log(program.name);
         console.log(program.logo)
         htmlTemplate += `
-    <article class="program-card">
+                <article class="program-card">
                     <div class="card-top-container">
                         <div class="logo-name-container">
                             <div class="card-program-logo-container">
-                                <img class="card-program-logo" src="img/premier-pro-logo.png" alt="Program logo">
+                                <img class="card-program-logo" src="${program.logo}" alt="Program logo">
                             </div>
                             <div class="program-name-container">
-                                <h3>Adobe</h3>
+                                <h3>${program.companyName}</h3>
                                 <h2>${program.name}</h2>
                             </div>
                         </div>
                         <div class="buttens-right-container">
-                            <button class="visit-btn">Visit site</button>
+                            <a href="${program.visitSite}" target="_blank" class="visit-btn">Visit site</a>
                             <div class="likes-container">
-                                <button class="like-btn"><img class="like-img" src="img/motion-graphics.jpg"
+                                <button class="like-btn"><img class="like-img" src="img/like-icon.svg"
                                         alt="Like button"></button>
                                 <div class="like-display">
-
+                                    <p>123 likes</p>
                                 </div>
                             </div>
                             <div class="favorites-container">
-                                <button class="add-to-fav-btn"><img class="star-img" src="img/graphic-design.jpg"
+                                <button class="add-to-fav-btn"><img class="star-img" src="img/star-icon.svg"
                                         alt="Favorites"></button>
-                                <p class="fav-text">add to favorites</p>
+                                <p class="fav-text">Add to favorites</p>
                             </div>
                         </div>
                     </div>
+                    <hr class="line-devider">
                     <div class="card-main-container">
-                        <div class="card-main-container_left">
-                            <p class="card-desc-container">Adobe Premiere Pro is a desktop video editing application for
-                                professionals and enthusiasts. This software, used by Hollywood workers, lets users turn
-                                raw footage into stunning cinematic products.
-                            </p>
-                            <div class="card-filter-container">
-                                <table class="filter-table">
-                                    <tr>
-                                        <td>
-                                            <p>Price</p>
-                                        </td>
-                                        <td>
-                                            <p>Program Difficulty</p>
-                                        </td>
-                                        <td>
-                                            <p>Platform</p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <h3><b>Expensive</b></h3>
-                                        </td>
-                                        <td><img class="difficulty-img" src="img/beginner_has_to_delete.svg"></td>
-                                        <td><img class="platform-img" src="img/windows-logo_DELETE.svg">
-                                            <img class="platform-img" src="img/windows-logo_DELETE.svg"></td>
-                                    </tr>
-                                </table>
+                        <div class="card-main-container-left">
+                            <div class="card-description-container">
+                                <p class="description">${program.description}</p>
                             </div>
-                            <div class="keyword-container">
-                                <p class="keyword">Video Editing</p>
-                                <p class="keyword">Video Editing</p>
+                            <div class="card-filter-container">
+                                <div class="filter-box">
+                                    <h4>Price</h4>
+                                    <div class="price-container">
+                                        <p>${program.price}</p>
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h4>Difficulty</h4>
+                                    <div class="diffculty-container">
+                                        <img src="${program.programDifficulty}" alt="Difficulty">
+                                    </div>
+                                </div>
+                                <div class="filter-box">
+                                    <h4>Platform</h4>
+                                    <div class="platform-container">
+                                        <img src="${program.platform}" alt="Platform">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="card-main-container-right">
-                            <video class="video" src="/vid/file_example_.mp4" onmouseover="videoPlay()"></video>
-                            <button class="course-btn"><b>Start YouTube course</b> </button>
+                            <div class="video-container">
+                                <iframe class="video" src="${program.video}">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="line-devider">
+                    <div class="card-bottum-container">
+                        <div class="card-keywords-container">
+                            <p class="keyword">${program.keywords}</p>
+                        </div>
+                        <div class="course-btn-container">
+                            <a class="course-btn" target="_blank" href="${program.course}">Start YouTube course</a>
                         </div>
                     </div>
                 </article>
