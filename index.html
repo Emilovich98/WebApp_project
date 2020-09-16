@@ -22,7 +22,7 @@
                 <h1 id="nav-heading">NaviCreate</h1>
                 <div id="nav-input-container">
                     <button id="fav-btn">favorites</button>
-                    <input id="search-input" placeholder="Search" type="text">
+                    <input id="search-input" placeholder="Search" type="text" onkeyup="searchPrograms(this.value)">
                 </div>
             </div>
         </nav>
@@ -73,88 +73,7 @@
             </div>
             <div id="content-area">
                 <!--Program card-->
-                <article class="program-card">
-                    <div class="card-top-container">
-                        <div class="logo-name-container">
-                            <div class="card-program-logo-container">
-                                <img class="card-program-logo" src="img/premier-pro-logo.png" alt="Program logo">
-                            </div>
-                            <div class="program-name-container">
-                                <h3>Adobe</h3>
-                                <h2>Premier Pro</h2>
-                            </div>
-                        </div>
-                        <div class="buttens-right-container">
-                            <button class="visit-btn">Visit site</button>
-                            <div class="likes-container">
-                                <button class="like-btn"><img class="like-img" src="img/like-icon.svg"
-                                        alt="Like button"></button>
-                                <div class="like-display">
-                                    <p>123 likes</p>
-                                </div>
-                            </div>
-                            <div class="favorites-container">
-                                <button class="add-to-fav-btn"><img class="star-img" src="img/star-icon.svg"
-                                        alt="Favorites"></button>
-                                <p class="fav-text">Add to favorites</p>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="line-devider">
-                    <div class="card-main-container">
-                        <div class="card-main-container-left">
-                            <div class="card-description-container">
-                                <p class="description">Adobe Premiere Pro is a desktop video editing application
-                                    for
-                                    professionals and enthusiasts. This software, used by Hollywood workers, lets users
-                                    turn
-                                    raw footage into stunning cinematic products.
-                                </p>
-                            </div>
-                            <div class="card-filter-container">
-                                <div class="filter-box">
-                                    <h4>Price</h4>
-                                    <div class="price-container">
-                                        <p>Expensive</p>
-                                    </div>
-                                </div>
-                                <div class="filter-box">
-                                    <h4>Difficulty</h4>
-                                    <div class="diffculty-container">
-                                        <img src="img/beginner.svg" alt="Difficulty">
-                                    </div>
-                                </div>
-                                <div class="filter-box">
-                                    <h4>Platform</h4>
-                                    <div class="platform-container">
-                                        <img src="img/apple-logo.svg" alt="Platform">
-                                        <img src="img/windows-logo.svg" alt="Platform">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-main-container-right">
-                            <div class="video-container">
-                                <iframe class="video" src="https://www.youtube.com/embed/S-R2ybl5Twk">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <hr class="line-devider">
-                    <div class="card-bottum-container">
-                        <div class="card-keywords-container">
-                            <p class="keyword">Video Editing</p>
-                            <p class="keyword">Video Editing</p>
-                            <p class="keyword">Video Editing</p>
-                            <p class="keyword">Video Editing</p>
-                            <p class="keyword">Video Editing</p>
-                            <p class="keyword">Video Editing</p>
-                        </div>
-                        <div class="course-btn-container">
-                            <button class="course-btn">Start YouTube course</button>
-                        </div>
-                    </div>
-                </article>
+
             </div>
             <div class="bottum-spacer"></div>
     </main>

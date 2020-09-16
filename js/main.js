@@ -32,6 +32,34 @@ programsRef.onSnapshot(function (snapshotData) {
     appendPrograms(programs);
 });
 
+/*function searchPrograms(value) {
+    console.log(value);
+    let filteredPrograms = [];
+    for (let Program of programs) {
+      let companyName = program.companyName.toLowerCase();
+      if (companyName.includes(value.toLowerCase()))
+      {
+        filteredPrograms.push(program);
+      }
+    }
+  
+    console.log(filteredPrograms);
+    appendPrograms(filteredPrograms);
+  }*/
+
+
+
+
+
+
+
+function appendKeyword(_keyword) {
+    let keyWordHtml = "";
+    for (let keyword of _keyword) {
+        keyWordHtml += ``;
+    }
+}
+
 // append users to the DOM
 function appendPrograms(programs) {
     let htmlTemplate = "";
