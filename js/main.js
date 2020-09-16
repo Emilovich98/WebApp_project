@@ -17,27 +17,28 @@ const db = firebase.firestore();
 const programsRef = db.collection("program-cards");
 
 let selectedProgramsId = "";
-
+let _programs = [];
 // ========== READ ==========
 // watch the database ref for changes
 programsRef.onSnapshot(function (snapshotData) {
-    let programs = [];
+_programs = [];
     snapshotData.forEach(function (doc) {
         //console.log(doc);
         let program = doc.data();
         console.log(program);
         program.id = doc.id;
-        programs.push(program);
+        _programs.push(program);
     });
-    appendPrograms(programs);
+    appendPrograms(_programs);
 });
 
-/*function searchPrograms(value) {
+function searchPrograms(value) {
     console.log(value);
     let filteredPrograms = [];
-    for (let Program of programs) {
+    for (let program of _programs) {
       let companyName = program.companyName.toLowerCase();
-      if (companyName.includes(value.toLowerCase()))
+      if (companyName.includes(value.toLowerCase())) 
+      
       {
         filteredPrograms.push(program);
       }
@@ -45,7 +46,7 @@ programsRef.onSnapshot(function (snapshotData) {
   
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
-  }*/
+  }
 
 
 
