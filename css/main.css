@@ -199,6 +199,7 @@
     margin: 0 auto;
     margin-top: 40px;
     border-radius: 10px;
+    background-color: white;
 }
 
 /* Card top */
@@ -242,14 +243,111 @@
     font-size: 30px;
 }
 
+
+
 /* Card main */
 .card-main-container {
-    background-color: cadetblue;
+
     height: 300px;
+    display: flex;
 }
 
-/* card keywords */
-.card-keywords-container {
-    background-color: cornflowerblue;
-    height: 70px;
-    border-radius: 0px 0px 10px 10px;
+.card-main-container_left {
+    width: 50%;
+    height: 100%;
+
+}
+
+.card-desc-container {
+    height: auto;
+    padding: 10px;
+    line-height: 25px;
+
+}
+
+.card-filter-container {
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.card-filter {
+    width: 33%;
+    height: auto;
+    display: block;
+    text-align: center;
+
+
+}
+
+.keyword-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+
+
+
+}
+
+.keyword {
+    display: flex;
+    height: auto;
+    padding: 10px 10px;
+    border-radius: 20px;
+    width: auto;
+    margin: 5px;
+    box-shadow: -1px 3px 5px -3px rgba(0, 0, 0, 0.75);
+    background-color: #E8E8E8;
+
+
+}
+
+.card-main-container-right {
+
+    width: 50%;
+    height: 100%;
+
+}
+
+.video {
+    width: 90%;
+    margin: 10px 0;
+    border-radius: 5px;
+
+}
+
+.course-btn {
+    background-color: var(--blue);
+    border: none;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+
+
+
+}
+
+.difficulty-img {
+    width: 80%;
+}
+
+.platform-img {
+    width: 20%;
+}
+
+.filter-table tr td {
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 30%;
+    border: 1px solid black;
+}
+
+.filter-table tr:nth-child(2) {
+    padding-top: 30px;
+}
