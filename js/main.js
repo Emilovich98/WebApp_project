@@ -39,7 +39,8 @@ function searchPrograms(value) {
       let companyName = program.companyName.toLowerCase();
       let name = program.name.toLowerCase();
       let price = program.price.toLowerCase();
-      //let keywords = program.keywords.toLowerCase()
+      let keywordsOne = program.price.toLowerCase();
+      //let keywords = program.keywords.chilld.toLowerCase()
       if (companyName.includes(value.toLowerCase()))
       {
         filteredPrograms.push(program);
