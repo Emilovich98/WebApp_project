@@ -46,9 +46,9 @@
                             <img id="price-arrow" src="img/filter-arrow.svg">
                         </button>
                         <div style="height: 0px;" id="price-dropdown" class="dropdown-content">
-                            <button onclick="priceDropdown()" href="#">Free</button>
-                            <button onclick="priceDropdown()" href="#">Cheap</button>
-                            <button onclick="priceDropdown()" href="#">Expensive</button>
+                            <button onclick="searchPrograms('free'); priceDropdown()" href="#">Free</button>
+                            <button onclick="searchPrograms('Cheap'); priceDropdown()" href="#">Cheap</button>
+                            <button onclick="searchPrograms('Expensive'); priceDropdown()" href="#">Expensive</button>
                         </div>
                     </div>
 
@@ -58,9 +58,11 @@
                             <img id="skill-arrow" src="img/filter-arrow.svg">
                         </button>
                         <div style="height: 0px;" id="skill-level-dropdown" class="dropdown-content">
-                            <button onclick="skillLevelDropdown()" href="#">Beginner</button>
-                            <button onclick="skillLevelDropdown()" href="#">Experienced</button>
-                            <button onclick="skillLevelDropdown()" href="#">Pro</button>
+                            <button onclick="searchPrograms('Beginner'); skillLevelDropdown()"
+                                href="#">Beginner</button>
+                            <button onclick="searchPrograms('Experienced'); skillLevelDropdown()"
+                                href="#">Experienced</button>
+                            <button onclick="searchPrograms('Pro'); skillLevelDropdown()" href="#">Pro</button>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -86,8 +88,8 @@
 
             </div>
             <!-- <div id="counter">
-                <p class="number">1</p>
-                <button onclick="addit()" class="buttonfor">Nyomjide</button>
+                <input class="number" value="69">
+                <button onclick="likeCounter(68)" class="buttonfor">Nyomjide</button>
 
 
             </div> -->

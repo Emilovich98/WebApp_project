@@ -60,12 +60,16 @@ function searchPrograms(value) {
     appendPrograms(filteredPrograms);
 
 
+
+
 }
 
 /*function findKeywords(keywords) {
 }*/
 
 // append users to the DOM
+
+
 
 function appendPrograms(programs) {
     let htmlTemplate = "";
@@ -172,3 +176,11 @@ function platformsArray(platforms) {
     }
     return template;
 }
+
+// function likeCounter(szambe) {
+//     let number = szambe;
+//     console.log(number);
+
+// }
+
+// likeCounter();
