@@ -46,9 +46,9 @@ function appendCategories(categories) {
     let htmlTemplate = "";
     for (let category of categories) {
         htmlTemplate += /*html*/ `
-            <div class="category">
+            <div onclick="searchPrograms('${category.categoryName}')" class="category">
                 <img class="category-icon" src="${category.categoryImage}" alt="category icon">
-                <p class="category-name">${category.categoryName}</p>
+                <p  class="category-name">${category.categoryName}</p>
             </div>
     `;
     }
