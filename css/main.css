@@ -412,7 +412,7 @@
 .card-description-container {
     height: 65%;
     padding: 16px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .description {
@@ -554,7 +554,6 @@ iframe {
     width: 350px;
     display: block;
     justify-content: center;
-
 }
 
 .number {
