@@ -41,6 +41,7 @@ function searchPrograms(value) {
         let companyName = program.companyName.toLowerCase();
         let name = program.name.toLowerCase();
         let price = program.price.toLowerCase();
+        let skillevel = program.difficultyId.toLowerCase();
         //let keywords = program.keywords.toLowerCase()
         console.log("program")
         if (companyName.includes(value.toLowerCase())) {
@@ -51,8 +52,14 @@ function searchPrograms(value) {
             filteredPrograms.push(program);
         } else if (program.keywords.includes(value)) {
             filteredPrograms.push(program);
-        }
 
+
+        } else if (program.platformId.includes(value)) {
+            filteredPrograms.push(program);
+
+        } else if (skillevel.includes(value)) {
+            filteredPrograms.push(program);
+        }
 
     }
 
@@ -178,8 +185,11 @@ function platformsArray(platforms) {
 }
 
 // function likeCounter(szambe) {
-//     let number = szambe;
+//     let number = document.querySelector(".number").value;
+//     number++;
 //     console.log(number);
+
+
 
 // }
 
