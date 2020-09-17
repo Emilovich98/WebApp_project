@@ -35,36 +35,35 @@ programsRef.onSnapshot(function (snapshotData) {
 function searchPrograms(value) {
     console.log(value);
     let filteredPrograms = [];
-    for (let program of _programs) {
+
+
+    for (const program of _programs) {
         let companyName = program.companyName.toLowerCase();
         let name = program.name.toLowerCase();
         let price = program.price.toLowerCase();
-        let keywordsOne = program.price.toLowerCase();
-        //let keywords = program.keywords.chilld.toLowerCase()
+        //let keywords = program.keywords.toLowerCase()
+        console.log("program")
         if (companyName.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
         } else if (name.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
         } else if (price.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
+        } else if (program.keywords.includes(value)) {
+            filteredPrograms.push(program);
         }
-        /*lse if (keywords.includes(value.toLowerCase()))
-        {
-          filteredPrograms.push(program);
-        }*/
+
+
     }
 
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
-}
 
 
-function appendKeyword(_keyword) {
-    let keyWordHtml = "";
-    for (let keyword of _keyword) {
-        keyWordHtml += ``;
-    }
 }
+
+/*function findKeywords(keywords) {
+}*/
 
 // append users to the DOM
 
@@ -124,7 +123,7 @@ function appendPrograms(programs) {
                                 <div class="filter-box">
                                     <h4>Platform</h4>
                                     <div class="platform-container">
-                                        <img src="${program.platform}" alt="Platform">
+                                        ${platformsArray(program.platform)}
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +138,7 @@ function appendPrograms(programs) {
                     <hr class="line-devider">
                     <div class="card-bottum-container">
                         <div class="card-keywords-container">
-                            <p class="keyword">${program.keywords}</p>
+                            ${keywordsArray(program.keywords)}
                         </div>
                         <div class="course-btn-container">
                             <a class="course-btn" target="_blank" href="${program.course}">Start YouTube course</a>
@@ -153,7 +152,23 @@ function appendPrograms(programs) {
 
 
 
-function addit() {
-    let number = document.querySelector("#number").value;
-    console.log(number);
+
+function keywordsArray(keywords) {
+    let template = "";
+    for (const keyword of keywords) {
+        template += /*html*/ `
+             <p class="keyword">${keyword}</p>
+        `;
+    }
+    return template;
+}
+
+function platformsArray(platforms) {
+    let template = "";
+    for (const platform of platforms) {
+        template += /*html*/ `
+             <img src="${platform}" alt="Platform">
+        `;
+    }
+    return template;
 }
