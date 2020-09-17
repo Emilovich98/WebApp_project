@@ -184,13 +184,19 @@ function platformsArray(platforms) {
     return template;
 }
 
-// function likeCounter(szambe) {
-//     let number = document.querySelector(".number").value;
-//     number++;
+
+// function likeCounter() {
+//     let number = 2;
+//     let pressed = false;
+
+//     if (pressed == false) {
+//         number++;
+//         pressed = true;
+
+//     } else {
+//         number--;
+//     }
+
 //     console.log(number);
-
-
-
+//     document.querySelector(".number").innerHTML = number;
 // }
-
-// likeCounter();
