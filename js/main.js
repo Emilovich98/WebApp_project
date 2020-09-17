@@ -40,7 +40,6 @@ function searchPrograms(value) {
         let name = program.name.toLowerCase();
         let price = program.price.toLowerCase();
         let skillevel = program.difficultyId.toLowerCase();
-        //let keywords = program.keywords.toLowerCase()
         console.log("program")
         if (companyName.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
@@ -48,10 +47,7 @@ function searchPrograms(value) {
             filteredPrograms.push(program);
         } else if (price.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
-        }/* else if (program.keywords.includes(value)) {
-            filteredPrograms.push(program);
-
-        }*/
+        }
         else if (matchKeywords(value.toLowerCase(), program.keywords)) { filteredPrograms.push(program); }
 
         else if (program.platformId.includes(value)) {
