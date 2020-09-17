@@ -10,6 +10,10 @@
     font-family: Montserrat;
 }
 
+*:focus {
+    outline: 0 !important;
+}
+
 /* Navigation menu */
 
 #nav {
@@ -155,23 +159,44 @@
 /* styling for filters */
 
 #filtes-container {
+    position: fixed;
+    z-index: 1;
+    background-color: white;
     width: 100%;
-    background-color: var(--blue);
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    height: 58px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding-right: 300px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+}
+
+#boxfilters-container {}
+
+#dropdown-container {
+    display: flex;
+    padding-right: 5px;
 }
 
 .drop-btn {
-    background-color: var(--blue);
+    background-color: #4B75FF;
     color: white;
-    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     font-size: 16px;
-    border: none;
-    width: 100%;
     display: flex;
+    border: none;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    height: 40px;
+    width: 140px;
+    white-space: nowrap;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .drop-btn p {
@@ -181,6 +206,7 @@
 .drop-btn img {
     padding-left: 20px;
     height: 10px;
+    transition: 0.2s;
 }
 
 .filter-devider {
@@ -189,37 +215,40 @@
     background-color: #1E4EEB;
 }
 
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
+.dropdown {}
 
 .dropdown-content {
-    display: none;
-    position: absolute;
     background-color: var(--blue);
     text-align: center;
-    width: 100%;
+    width: 140px;
+    margin-left: 5px;
     z-index: 1;
     border-radius: 0px 0px 10px 10px;
+    border: none;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+    overflow-y: hidden;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 8px;
+    transition: 0.2s;
 }
 
-.dropdown-content a {
+.dropdown-content button {
+    width: 90%;
     color: white;
-    padding: 8px 8px;
-    text-decoration: none;
-    display: block;
-    border-top: 2px solid #1E4EEB;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border-radius: 8px;
+    background-color: var(--blue);
+    border: none;
+    font-size: 1em;
 }
 
-.dropdown-content a:hover {
+.dropdown-content button:hover {
     background-color: var(--blue-hover);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+.dropdown:hover .dropdown-content {}
 
 /* Program cards styling */
 
@@ -254,6 +283,7 @@
 .card-program-logo {
     height: 55px;
     border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
 }
 
 .program-name-container {
@@ -514,6 +544,6 @@ iframe {
     border: none;
 }
 
-.bottum-spacer {
+.spacer {
     height: 50px;
 }

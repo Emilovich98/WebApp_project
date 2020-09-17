@@ -34,48 +34,52 @@
     <main id="main">
         <div id="results-window">
             <div id="filtes-container">
-                <div class="dropdown">
-                    <div class="drop-btn">
-                        <p>Skill level</p>
-                        <img src="img/filter-arrow.svg">
-                    </div>
-                    <div class="dropdown-content">
-                        <a href="#">Beginner</a>
-                        <a href="#">Medium</a>
-                        <a href="#">Experienced</a>
-                    </div>
+                <div id="boxfilters-container">
+
                 </div>
-                <div class="filter-devider"></div>
-                <div class="dropdown">
-                    <div class="drop-btn">
-                        <p>Platform</p>
-                        <img src="img/filter-arrow.svg">
+                <div id="dropdown-container">
+                    <div class="dropdown">
+                        <button onclick="priceDropdown()" class="drop-btn">
+                            <p>Price</p>
+                            <img id="price-arrow" src="img/filter-arrow.svg">
+                        </button>
+                        <div style="height: 0px;" id="price-dropdown" class="dropdown-content">
+                            <button onclick="priceDropdown()" href="#">Free</button>
+                            <button onclick="priceDropdown()" href="#">Cheap</button>
+                            <button onclick="priceDropdown()" href="#">Expensive</button>
+                        </div>
                     </div>
-                    <div class="dropdown-content">
-                        <a href="#">Windows</a>
-                        <a href="#">Mac OS</a>
-                        <a href="#">iOS</a>
-                        <a href="#">Android</a>
+                    <div class="dropdown">
+                        <button onclick="skillLevelDropdown()" class="drop-btn">
+                            <p>Skill level</p>
+                            <img id="skill-arrow" src="img/filter-arrow.svg">
+                        </button>
+                        <div style="height: 0px;" id="skill-level-dropdown" class="dropdown-content">
+                            <button onclick="skillLevelDropdown()" href="#">Beginner</button>
+                            <button onclick="skillLevelDropdown()" href="#">Experienced</button>
+                            <button onclick="skillLevelDropdown()" href="#">Pro</button>
+                        </div>
                     </div>
-                </div>
-                <div class="filter-devider"></div>
-                <div class="dropdown">
-                    <div class="drop-btn">
-                        <p>Price</p>
-                        <img src="img/filter-arrow.svg">
-                    </div>
-                    <div class="dropdown-content">
-                        <a href="#">Free</a>
-                        <a href="#">Cheap</a>
-                        <a href="#">Expensive</a>
+                    <div class="dropdown">
+                        <button onclick="platformDropdown()" class="drop-btn">
+                            <p>Platform</p>
+                            <img id="platform-arrow" src="img/filter-arrow.svg">
+                        </button>
+                        <div style="height: 0px;" id="platform-dropdown" class="dropdown-content">
+                            <button onclick="platformDropdown()" href="#">Windows</button>
+                            <button onclick="platformDropdown()" href="#">Mac OS</button>
+                            <button onclick="platformDropdown()" href="#">iOS</button>
+                            <button onclick="platformDropdown()" href="#">Android</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="spacer"></div>
             <div id="content-area">
                 <!--Program card-->
 
             </div>
-            <div class="bottum-spacer"></div>
+            <div class="spacer"></div>
     </main>
 
 
@@ -87,6 +91,7 @@
     <!-- main js file -->
     <script src="js/main.js"></script>
     <script src="js/categories-array.js"></script>
+    <script src="js/dropdown.js"></script>
 
 </body>
 

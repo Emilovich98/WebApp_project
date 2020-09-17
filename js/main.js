@@ -135,7 +135,7 @@ function appendPrograms(programs) {
                         </div>
                         <div class="card-main-container-right">
                             <div class="video-container">
-                                <iframe class="video" src="${program.video}">
+                                <iframe class="video" src="">
                                 </iframe>
                             </div>
                         </div>
@@ -153,4 +153,5 @@ function appendPrograms(programs) {
     `;
     }
     document.querySelector('#content-area').innerHTML = htmlTemplate;
-}
+};
+
