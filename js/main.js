@@ -21,7 +21,7 @@ let _programs = [];
 // ========== READ ==========
 // watch the database ref for changes
 programsRef.onSnapshot(function (snapshotData) {
-_programs = [];
+    _programs = [];
     snapshotData.forEach(function (doc) {
         //console.log(doc);
         let program = doc.data();
@@ -36,32 +36,27 @@ function searchPrograms(value) {
     console.log(value);
     let filteredPrograms = [];
     for (let program of _programs) {
-      let companyName = program.companyName.toLowerCase();
-      let name = program.name.toLowerCase();
-      let price = program.price.toLowerCase();
-      let keywordsOne = program.price.toLowerCase();
-      //let keywords = program.keywords.chilld.toLowerCase()
-      if (companyName.includes(value.toLowerCase()))
-      {
-        filteredPrograms.push(program);
-      }
-      else if (name.includes(value.toLowerCase()))
-      {
-        filteredPrograms.push(program);
-      }
-      else if (price.includes(value.toLowerCase()))
-      {
-        filteredPrograms.push(program);
-      }
-      /*lse if (keywords.includes(value.toLowerCase()))
-      {
-        filteredPrograms.push(program);
-      }*/
+        let companyName = program.companyName.toLowerCase();
+        let name = program.name.toLowerCase();
+        let price = program.price.toLowerCase();
+        let keywordsOne = program.price.toLowerCase();
+        //let keywords = program.keywords.chilld.toLowerCase()
+        if (companyName.includes(value.toLowerCase())) {
+            filteredPrograms.push(program);
+        } else if (name.includes(value.toLowerCase())) {
+            filteredPrograms.push(program);
+        } else if (price.includes(value.toLowerCase())) {
+            filteredPrograms.push(program);
+        }
+        /*lse if (keywords.includes(value.toLowerCase()))
+        {
+          filteredPrograms.push(program);
+        }*/
     }
-  
+
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
-  }
+}
 
 
 function appendKeyword(_keyword) {
@@ -72,6 +67,7 @@ function appendKeyword(_keyword) {
 }
 
 // append users to the DOM
+
 function appendPrograms(programs) {
     let htmlTemplate = "";
     for (let program of programs) {
@@ -155,3 +151,9 @@ function appendPrograms(programs) {
     document.querySelector('#content-area').innerHTML = htmlTemplate;
 };
 
+
+
+function addit() {
+    let number = document.querySelector("#number").value;
+    console.log(number);
+}

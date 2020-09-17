@@ -547,3 +547,22 @@ iframe {
 .spacer {
     height: 50px;
 }
+
+#counter {
+    background-color: tomato;
+    height: 350px;
+    width: 350px;
+    display: block;
+    justify-content: center;
+
+}
+
+.number {
+    height: 80px;
+    width: 80px;
+    margin: 50px;
+}
+
+.buttonfor {
+    height: 50px;
+}
