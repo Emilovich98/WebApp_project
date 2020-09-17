@@ -1,39 +1,39 @@
 let categoriesArray = [{
-        categoryName: "Video editing",
-        categoryImage: "../img/video-editing.jpg"
-    },
-    {
-        categoryName: "Photo editing",
-        categoryImage: "../img/photo-editing.jpg"
-    },
-    {
-        categoryName: "Digital painting",
-        categoryImage: "../img/digital-painting.jpg"
-    },
-    {
-        categoryName: "Color grading",
-        categoryImage: "../img/color-grading.jpg"
-    },
-    {
-        categoryName: "Graphic design",
-        categoryImage: "../img/graphic-design.jpg"
-    },
-    {
-        categoryName: "Motion graphics",
-        categoryImage: "../img/motion-graphics.jpg"
-    },
-    {
-        categoryName: "Animation",
-        categoryImage: "../img/animation.jpg"
-    },
-    {
-        categoryName: "Visual effects",
-        categoryImage: "../img/vfx.jpg"
-    },
-    {
-        categoryName: "Audio editing",
-        categoryImage: "../img/audio-editing.jpg"
-    }
+    categoryName: "Video editing",
+    categoryImage: "../img/video-editing.jpg"
+},
+{
+    categoryName: "Photo editing",
+    categoryImage: "../img/photo-editing.jpg"
+},
+{
+    categoryName: "Digital painting",
+    categoryImage: "../img/digital-drawing.jpg"
+},
+{
+    categoryName: "Color grading",
+    categoryImage: "../img/color-grading.jpg"
+},
+{
+    categoryName: "Graphic design",
+    categoryImage: "../img/graphic-design.jpg"
+},
+{
+    categoryName: "Motion graphics",
+    categoryImage: "../img/motion-graphics.jpg"
+},
+{
+    categoryName: "Animation",
+    categoryImage: "../img/animation.jpg"
+},
+{
+    categoryName: "Visual effects",
+    categoryImage: "../img/vfx.jpg"
+},
+{
+    categoryName: "Audio editing",
+    categoryImage: "../img/audio-editing.jpg"
+}
 ];
 
 console.log(categoriesArray);
