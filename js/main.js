@@ -35,12 +35,12 @@ _programs = [];
 function searchPrograms(value) {
     console.log(value);
     let filteredPrograms = [];
-    for (let program of _programs) {
+    for (const program of _programs) {
       let companyName = program.companyName.toLowerCase();
       let name = program.name.toLowerCase();
       let price = program.price.toLowerCase();
-      let keywordsOne = program.price.toLowerCase();
-      //let keywords = program.keywords.chilld.toLowerCase()
+      //let keywords = program.keywords.toLowerCase()
+      console.log("program")
       if (companyName.includes(value.toLowerCase()))
       {
         filteredPrograms.push(program);
@@ -53,23 +53,18 @@ function searchPrograms(value) {
       {
         filteredPrograms.push(program);
       }
-      /*lse if (keywords.includes(value.toLowerCase()))
+      else if (program.keywords.includes(value))
       {
         filteredPrograms.push(program);
-      }*/
+      }
     }
   
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
   }
 
-
-function appendKeyword(_keyword) {
-    let keyWordHtml = "";
-    for (let keyword of _keyword) {
-        keyWordHtml += ``;
-    }
-}
+/*function findKeywords(keywords) {
+}*/
 
 // append users to the DOM
 function appendPrograms(programs) {

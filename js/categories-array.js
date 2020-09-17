@@ -56,3 +56,5 @@ function appendCategories(categories) {
     }
     document.querySelector("#categories-spawn").innerHTML = htmlTemplate;
 }
+
+
