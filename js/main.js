@@ -34,9 +34,7 @@ programsRef.onSnapshot(function (snapshotData) {
 
 function searchPrograms(value) {
     console.log(value);
-    let filteredPrograms = [];
-
-
+    let filteredPrograms = []
     for (const program of _programs) {
         let companyName = program.companyName.toLowerCase();
         let name = program.name.toLowerCase();
@@ -50,11 +48,13 @@ function searchPrograms(value) {
             filteredPrograms.push(program);
         } else if (price.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
-        } else if (program.keywords.includes(value)) {
+        }/* else if (program.keywords.includes(value)) {
             filteredPrograms.push(program);
 
+        }*/
+        else if (matchKeywords(value.toLowerCase(), program.keywords)) { filteredPrograms.push(program); }
 
-        } else if (program.platformId.includes(value)) {
+        else if (program.platformId.includes(value)) {
             filteredPrograms.push(program);
 
         } else if (skillevel.includes(value)) {
@@ -62,14 +62,22 @@ function searchPrograms(value) {
         }
 
     }
-
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
-
-
-
-
 }
+
+
+
+function matchKeywords(searchValue, keywords) {
+    let match = false;
+    for (const keyword of keywords) {
+        if (keyword.toLowerCase().includes(searchValue)) {
+            match = true;
+        }
+    }
+    return match;
+}
+
 
 /*function findKeywords(keywords) {
 }*/
