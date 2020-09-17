@@ -8,7 +8,7 @@ let categoriesArray = [{
 },
 {
     categoryName: "Digital painting",
-    categoryImage: "../img/digital-drawing.jpg"
+    categoryImage: "../img/digital-painting.jpg"
 },
 {
     categoryName: "Color grading",
