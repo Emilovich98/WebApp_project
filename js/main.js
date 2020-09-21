@@ -16,12 +16,16 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const programsRef = db.collection("program-cards");
 
+
 let selectedProgramsId = "";
 let _programs = [];
+
+
 // ========== READ ==========
 // watch the database ref for changes
 programsRef.onSnapshot(function (snapshotData) {
     _programs = [];
+
     snapshotData.forEach(function (doc) {
         //console.log(doc);
         let program = doc.data();
@@ -31,6 +35,10 @@ programsRef.onSnapshot(function (snapshotData) {
     });
     appendPrograms(_programs);
 });
+
+
+
+
 
 function searchPrograms(value) {
     console.log(value);
