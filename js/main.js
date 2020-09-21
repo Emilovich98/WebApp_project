@@ -47,10 +47,9 @@ function searchPrograms(value) {
             filteredPrograms.push(program);
         } else if (price.includes(value.toLowerCase())) {
             filteredPrograms.push(program);
-        }
-        else if (matchKeywords(value.toLowerCase(), program.keywords)) { filteredPrograms.push(program); }
-
-        else if (program.platformId.includes(value)) {
+        } else if (matchKeywords(value.toLowerCase(), program.keywords)) {
+            filteredPrograms.push(program);
+        } else if (program.platformId.includes(value)) {
             filteredPrograms.push(program);
 
         } else if (skillevel.includes(value)) {
@@ -189,18 +188,23 @@ function platformsArray(platforms) {
 }
 
 
-// function likeCounter() {
-//     let number = 2;
-//     let pressed = false;
 
-//     if (pressed == false) {
-//         number++;
-//         pressed = true;
+let pressed = false;
+let number = 2;
 
-//     } else {
-//         number--;
-//     }
+function likeCounter() {
 
-//     console.log(number);
-//     document.querySelector(".number").innerHTML = number;
-// }
+
+
+    if (pressed == false) {
+        number++;
+        pressed = true;
+
+    } else {
+        number--;
+        pressed = false;
+    }
+
+    console.log(number);
+    document.querySelector(".number").innerHTML = number;
+}
