@@ -105,7 +105,7 @@ function appendPrograms(programs) {
                                 <button class="like-btn"><img class="like-img" src="img/like-icon.svg"
                                         alt="Like button"></button>
                                 <div class="like-display">
-                                    <p>123 likes</p>
+                                    <p>${program.likes} likes</p>
                                 </div>
                             </div>
                             <div class="favorites-container">
