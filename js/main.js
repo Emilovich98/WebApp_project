@@ -102,7 +102,7 @@ function appendPrograms(programs) {
                         <div class="buttens-right-container">
                             <a href="${program.visitSite}" target="_blank" class="visit-btn">Visit site</a>
                             <div class="likes-container">
-                                <button class="like-btn"><img class="like-img" src="img/like-icon.svg"
+                                <button class="like-btn" onclick="likeCounter('${program.id}', ${program.likes})"><img class="like-img" src="img/like-icon.svg"
                                         alt="Like button"></button>
                                 <div class="like-display">
                                     <p>${program.likes} likes</p>
@@ -144,7 +144,7 @@ function appendPrograms(programs) {
                         </div>
                         <div class="card-main-container-right">
                             <div class="video-container">
-                                <iframe class="video" src="">
+                                <iframe class="video" src="${program.video}">
                                 </iframe>
                             </div>
                         </div>
@@ -187,24 +187,25 @@ function platformsArray(platforms) {
     return template;
 }
 
-
-
 let pressed = false;
 let number = 2;
 
-function likeCounter() {
-
-
-
-    if (pressed == false) {
-        number++;
-        pressed = true;
-
-    } else {
-        number--;
-        pressed = false;
-    }
-
-    console.log(number);
-    document.querySelector(".number").innerHTML = number;
+function likeCounter(id, likes) {
+    programsRef.doc(id).update({
+        likes: likes + 1
+    });
 }
+
+/*
+if (pressed == false) {
+    number++;
+    pressed = true;
+
+} else {
+    number--;
+    pressed = false;
+}
+
+console.log(number);
+document.querySelector(".number").innerHTML = number;
+*/
