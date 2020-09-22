@@ -1,6 +1,6 @@
 "use strict";
 
-// Your web app's Firebase configuration
+// Your web app's Firebase configuration  (contribution: Emil, David P, David W)
 const firebaseConfig = {
     apiKey: "AIzaSyB5ZzBbO5Ighm9NcExnwFekxyFJyKJXCxo",
     authDomain: "webapp-51d44.firebaseapp.com",
@@ -20,7 +20,7 @@ let selectedProgramsId = "";
 let _programs = [];
 
 // ========== READ ==========
-// watch the database ref for changes
+// watch the database ref for changes // (contribution: Emil, David P, David W)
 programsRef.onSnapshot(function (snapshotData) {
     _programs = [];
 
@@ -33,7 +33,7 @@ programsRef.onSnapshot(function (snapshotData) {
     });
     appendPrograms(_programs);
 });
-
+// (contribution:  David W, David P)
 function searchPrograms(value) {
     console.log(value);
     let filteredPrograms = []
@@ -71,7 +71,7 @@ function matchKeywords(searchValue, keywords) {
     return match;
 }
 
-// append program cards to the DOM
+// append program cards to the DOM  (contribution:  David P)
 function appendPrograms(programs) {
     let htmlTemplate = "";
     for (let program of programs) {
@@ -154,7 +154,7 @@ function appendPrograms(programs) {
     }
     document.querySelector('#content-area').innerHTML = htmlTemplate;
 };
-
+// (contribution: David W)
 function keywordsArray(keywords) {
     let template = "";
     for (const keyword of keywords) {
@@ -174,7 +174,7 @@ function platformsArray(platforms) {
     }
     return template;
 }
-
+// (contribution: Emil, David P)
 function likeCounter(id, likes) {
     programsRef.doc(id).update({
         likes: likes + 1
