@@ -7,7 +7,7 @@ let categoriesArray = [{
     categoryImage: "../img/photo-editing.jpg"
 },
 {
-    categoryName: "Digital painting",
+    categoryName: "Digital drawing",
     categoryImage: "../img/digital-painting.jpg"
 },
 {
