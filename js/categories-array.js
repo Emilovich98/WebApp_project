@@ -1,3 +1,6 @@
+
+// (contribution:  Emil)
+
 //categories array
 let categoriesArray = [{
     categoryName: "Video editing",

@@ -71,7 +71,7 @@ function matchKeywords(searchValue, keywords) {
     return match;
 }
 
-// append program cards to the DOM  (contribution:  David P)
+// append program cards to the DOM  (contribution:  David P, Emil)
 function appendPrograms(programs) {
     let htmlTemplate = "";
     for (let program of programs) {
@@ -154,7 +154,7 @@ function appendPrograms(programs) {
     }
     document.querySelector('#content-area').innerHTML = htmlTemplate;
 };
-// (contribution: David W)
+// (contribution: David W, Emil)
 function keywordsArray(keywords) {
     let template = "";
     for (const keyword of keywords) {

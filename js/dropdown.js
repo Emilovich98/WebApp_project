@@ -1,4 +1,7 @@
 
+// (contribution:  Emil)
+
+//dropdown animation trigger
 function priceDropdown() {
     let click = document.getElementById("price-dropdown");
     let arrow = document.getElementById("price-arrow");
