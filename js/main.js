@@ -16,10 +16,8 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 const programsRef = db.collection("program-cards");
 
-
 let selectedProgramsId = "";
 let _programs = [];
-
 
 // ========== READ ==========
 // watch the database ref for changes
@@ -35,10 +33,6 @@ programsRef.onSnapshot(function (snapshotData) {
     });
     appendPrograms(_programs);
 });
-
-
-
-
 
 function searchPrograms(value) {
     console.log(value);
@@ -59,17 +53,13 @@ function searchPrograms(value) {
             filteredPrograms.push(program);
         } else if (program.platformId.includes(value)) {
             filteredPrograms.push(program);
-
         } else if (skillevel.includes(value)) {
             filteredPrograms.push(program);
         }
-
     }
     console.log(filteredPrograms);
     appendPrograms(filteredPrograms);
 }
-
-
 
 function matchKeywords(searchValue, keywords) {
     let match = false;
@@ -81,14 +71,7 @@ function matchKeywords(searchValue, keywords) {
     return match;
 }
 
-
-/*function findKeywords(keywords) {
-}*/
-
-// append users to the DOM
-
-
-
+// append program cards to the DOM
 function appendPrograms(programs) {
     let htmlTemplate = "";
     for (let program of programs) {
@@ -172,9 +155,6 @@ function appendPrograms(programs) {
     document.querySelector('#content-area').innerHTML = htmlTemplate;
 };
 
-
-
-
 function keywordsArray(keywords) {
     let template = "";
     for (const keyword of keywords) {
@@ -195,25 +175,8 @@ function platformsArray(platforms) {
     return template;
 }
 
-let pressed = false;
-let number = 2;
-
 function likeCounter(id, likes) {
     programsRef.doc(id).update({
         likes: likes + 1
     });
 }
-
-/*
-if (pressed == false) {
-    number++;
-    pressed = true;
-
-} else {
-    number--;
-    pressed = false;
-}
-
-console.log(number);
-document.querySelector(".number").innerHTML = number;
-*/

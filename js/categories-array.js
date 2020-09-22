@@ -1,3 +1,4 @@
+//categories array
 let categoriesArray = [{
     categoryName: "Video editing",
     categoryImage: "../img/video-editing.jpg"
@@ -40,7 +41,7 @@ console.log(categoriesArray);
 appendCategories(categoriesArray);
 
 /*
-Appends json data to the DOM
+Appends array to the DOM
 */
 function appendCategories(categories) {
     let htmlTemplate = "";

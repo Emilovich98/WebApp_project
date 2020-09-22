@@ -8,6 +8,7 @@
     <meta name="author" content="NaviCreate A/S">
     <title>NaviCreate.dk</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type="image/svg" href="img/webapp-logo.svg" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&display=swap"
         rel="stylesheet">
 </head>
@@ -15,15 +16,18 @@
 <body>
     <header>
         <nav id="nav">
-            <div id="nav-logo">
-                <div id="logo-container">
-                    <img id="logo" src="img/webapp-logo.svg">
+            <a href="index.html">
+                <div id="nav-logo">
+                    <div id="logo-container">
+                        <img id="logo" src="img/webapp-logo.svg" alt="logo">
+                    </div>
+                    <h1 id="nav-heading">NAVICREATE</h1>
+
                 </div>
-                <h1 id="nav-heading">NAVICREATE</h1>
-                <div id="nav-input-container">
-                    <button id="fav-btn">favorites</button>
-                    <input id="search-input" placeholder="Search" type="text" onkeyup="searchPrograms(this.value)">
-                </div>
+            </a>
+            <div id="nav-input-container">
+                <button id="fav-btn">Favorites</button>
+                <input id="search-input" placeholder="Search" type="text" onkeyup="searchPrograms(this.value)">
             </div>
         </nav>
         <div id="categories">
@@ -42,37 +46,37 @@
                 <div id="dropdown-container">
                     <div class="dropdown">
                         <button onclick="priceDropdown()" class="drop-btn">
-                            <p>Price</p>
-                            <img id="price-arrow" src="img/filter-arrow.svg">
+                            Price
+                            <img id="price-arrow" src="img/filter-arrow.svg" alt="arrow">
                         </button>
                         <div style="height: 0px;" id="price-dropdown" class="dropdown-content">
-                            <button onclick="searchPrograms('Free'); priceDropdown()" href="#">Free</button>
-                            <button onclick="searchPrograms('Cheap'); priceDropdown()" href="#">Cheap</button>
-                            <button onclick="searchPrograms('Expensive'); priceDropdown()" href="#">Expensive</button>
+                            <button onclick="searchPrograms('Free'); priceDropdown()">Free</button>
+                            <button onclick="searchPrograms('Cheap'); priceDropdown()">Cheap</button>
+                            <button onclick="searchPrograms('Expensive'); priceDropdown()">Expensive</button>
                         </div>
                     </div>
 
                     <div class="dropdown">
                         <button onclick="skillLevelDropdown()" class="drop-btn">
-                            <p>Skill level</p>
-                            <img id="skill-arrow" src="img/filter-arrow.svg">
+                            Skill level
+                            <img id="skill-arrow" src="img/filter-arrow.svg" alt="arrow">
                         </button>
                         <div style="height: 0px;" id="skill-level-dropdown" class="dropdown-content">
-                            <button onclick="searchPrograms('1'); skillLevelDropdown()" href="#">Beginner</button>
-                            <button onclick="searchPrograms('2'); skillLevelDropdown()" href="#">Experienced</button>
-                            <button onclick="searchPrograms('3'); skillLevelDropdown()" href="#">Pro</button>
+                            <button onclick="searchPrograms('1'); skillLevelDropdown()">Beginner</button>
+                            <button onclick="searchPrograms('2'); skillLevelDropdown()">Experienced</button>
+                            <button onclick="searchPrograms('3'); skillLevelDropdown()">Pro</button>
                         </div>
                     </div>
                     <div class="dropdown">
                         <button onclick="platformDropdown()" class="drop-btn">
-                            <p>Platform</p>
-                            <img id="platform-arrow" src="img/filter-arrow.svg">
+                            Platform
+                            <img id="platform-arrow" src="img/filter-arrow.svg" alt="arrow">
                         </button>
                         <div style="height: 0px;" id="platform-dropdown" class="dropdown-content">
-                            <button onclick="searchPrograms('windows'); platformDropdown()" href="#">Windows</button>
-                            <button onclick="searchPrograms('mac'); platformDropdown()" href="#">Mac OS</button>
-                            <button onclick="searchPrograms('ios'); platformDropdown()" href="#">iOS</button>
-                            <button onclick="searchPrograms('android'); platformDropdown()" href="#">Android</button>
+                            <button onclick="searchPrograms('windows'); platformDropdown()">Windows</button>
+                            <button onclick="searchPrograms('mac'); platformDropdown()">Mac OS</button>
+                            <button onclick="searchPrograms('ios'); platformDropdown()">iOS</button>
+                            <button onclick="searchPrograms('android'); platformDropdown()">Android</button>
                         </div>
                     </div>
                 </div>
